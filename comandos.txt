@@ -19,6 +19,9 @@ $ kubectl get deployments
 - Viszualiza todos os configmaps
 $ kubectl get configmap
 
+-Visualizar Horizontal Pod Autoscaling
+$ kubectl get hpa
+
 - Exclui todos os pods (caso sejam criados apartir de um deployment serão recriados)
 $ kubectl delete pods --all
 
@@ -43,3 +46,14 @@ $ minikube tunnel
 
 - Recebe qual Ip do minikube
 $ minikube ip
+
+- Mostra extensões que podemos utilizar
+$ minikube addons list
+
+- habilitar o server metrics no minikube (teste de horizontal pod autoscaling)
+$ minikube addons enable metrics-sever
+
+
+
+-- Script de test hpa --
+$ bash force-requests-script.sh 0.001 > out2.txt
