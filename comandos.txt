@@ -19,6 +19,8 @@ $ kubectl get deployments
 - Viszualiza todos os configmaps
 $ kubectl get configmap
 
+- Exclui todos os pods (caso sejam criados apartir de um deployment serão recriados)
+$ kubectl delete pods --all
 
 - Acessa o terminal interno do pod
 $ kubectl exec -it <nome do pod> -- bash
