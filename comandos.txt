@@ -1,0 +1,9 @@
+
+- Criando uma imagem no mode iterativo 
+kubectl run <Nome do Pod> --image=<Nome da imagem>
+
+- Criando um componente do kubernetes a partir de um arquivo de config yaml
+kubectl apply -f <caminho/nome do arquivo>
+
+- Criar tunnel para service NodePort para ser possível chamar um service
+minikube service <Nome do Service no kubernetes>
