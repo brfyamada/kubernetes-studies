@@ -1,9 +1,43 @@
 
+-- Kubectl --
+
 - Criando uma imagem no mode iterativo 
-kubectl run <Nome do Pod> --image=<Nome da imagem>
+$ kubectl run <Nome do Pod> --image=<Nome da imagem>
 
 - Criando um componente do kubernetes a partir de um arquivo de config yaml
-kubectl apply -f <caminho/nome do arquivo>
+$ kubectl apply -f <caminho/nome do arquivo>
+
+- Visualiza todos os pods e seus IPs
+$ kubectl get pod -o wide
+
+- Visualiza todos os serviços
+$ kubectl get svc
+
+- Visualiza todos os deployments ativos
+$ kubectl get deployments
+
+- Viszualiza todos os configmaps
+$ kubectl get configmap
+
+
+- Acessa o terminal interno do pod
+$ kubectl exec -it <nome do pod> -- bash
+
+
+
+-- Minikube -- 
+
+- Inicia o minikube com docker 
+$ minikube start --driver=docker
+
+- Pausa o minikube
+$ minikube stop
 
 - Criar tunnel para service NodePort para ser possível chamar um service
-minikube service <Nome do Service no kubernetes>
+$ minikube service <Nome do Service no kubernetes>
+
+-Criar um tunnel para LoadBalancer (permite acessar os serviços pelo localhost mesmo utilizando wsl2)
+$ minikube tunnel
+
+- Recebe qual Ip do minikube
+$ minikube ip
